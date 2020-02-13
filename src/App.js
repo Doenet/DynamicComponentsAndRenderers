@@ -14,12 +14,11 @@ class App extends Component {
   loadComponent(componentName) {
 
     if (componentName !== "") {
-      console.log(this.componentsNames.includes(componentName));
       
       if (!this.componentsNames.includes(componentName)) {
-        return import(`./${componentName}.js`).then( component => {
+        return import(`./components/${componentName}.js`).then( component => {
           // this.components.push(<Component />);
-          this.components.push(React.createElement(component.default));
+          this.components.push(React.createElement(component.default, {key:componentName}));
           this.componentsNames.push(componentName);
           console.log(`${componentName} loaded.`);
           this.forceUpdate();
