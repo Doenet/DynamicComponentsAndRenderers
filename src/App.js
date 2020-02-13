@@ -5,41 +5,35 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-
-    this.state = { 
-      first: null,
-      second: null,
-      third: null
-     };
+    
+    this.components = [];
+    this.componentsNames = [];
+   
   }
 
-  loadComponent(componentId) {
-    if (componentId === "First") {
-      if (this.state.first === null) {
-        return import("./First.js").then( component => {
-          this.setState({first: React.createElement(component.default)});
-          console.log("First loaded.");
-        }).catch(error => "Error loading First.");
-      } else {
-        this.setState({first: null});
-      }
-    } else if (componentId === "Second") {
-      return import("./Second.js").then( component => {
-        this.setState({second: React.createElement(component.default)});
-        console.log("Second loaded.");
-      }).catch(error => "Error loading Second.");
-    } else if (componentId === "Third") {
-      return import("./Third.js").then( component => {
-        this.setState({third: React.createElement(component.default)});
-        console.log("Third loaded.");
-      }).catch(error => "Error loading Third.");;
-    } else {
+  loadComponent(componentName) {
 
-    }
+    if (componentName !== "") {
+      console.log(this.componentsNames.includes(componentName));
+      
+      if (!this.componentsNames.includes(componentName)) {
+        return import(`./${componentName}.js`).then( component => {
+          // this.components.push(<Component />);
+          this.components.push(React.createElement(component.default));
+          this.componentsNames.push(componentName);
+          console.log(`${componentName} loaded.`);
+          this.forceUpdate();
+        }).catch(error => `Error loading ${componentName}.`);
+      } else {
+        console.log(`already added ${componentName}`);
+        
+      }
+    } 
+      return null;
+    
   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="App">
         <div className="header">
@@ -49,11 +43,10 @@ class App extends Component {
           <button onClick={() => this.loadComponent("First")}>First</button>
           <button onClick={() => this.loadComponent("Second")}>Second</button>
           <button onClick={() => this.loadComponent("Third")}>Third</button>
+          <button onClick={() => this.loadComponent("Fourth")}>Fourth</button>
         </div>
         <div className="components-container">
-          {this.state.first}
-          {this.state.second}
-          {this.state.third}
+          {this.components}
         </div>
       </div>
     );
