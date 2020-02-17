@@ -33,7 +33,7 @@ module.exports = {
       // "components/Third.js" : "./src/components/Third.js",
       // "components/Fourth.js" : "./src/components/Fourth.js",
       "index.js" : "./src/index.js",
-      "sw.js" : "./src/sw.js",
+      // "sw.js" : "./src/sw.js",
     },
 
     output: {
@@ -65,7 +65,8 @@ module.exports = {
     },
     plugins: [
       new HtmlWebPackPlugin({
-          chunks:['index.js','sw.js'],
+          // chunks:['index.js','sw.js'],
+          chunks:['index.js'],
           template: "./src/index.html",
           filename: "./index.html",
           // favicon: "",
