@@ -3,18 +3,37 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { resolve } = require('path')
+// const glob = require('glob');
+
+// const componentsPaths = glob.sync('./src/components/*.js');
+
+// const entryObject = componentsPaths.reduce((acc, item) => {
+//   const name = item.replace('./src/', '');
+//   acc[name] = item;
+//   return acc;
+// }, {});
+
+// console.log(entryObject);
+
+
+// entryObject["index.js"] = "./src/index.js";
+// entryObject["sw.js"] = "./src/sw.js";
+// console.log(entryObject);
+   
 
 module.exports = {
 
     // devtool: 'source-map',
-    entry: {
-      // "viewer/index.js" : "./src/viewer/index.js",
-      // "page/index.js" : "./src/page/index.js",
-      // "course/index.js" : "./src/course/index.js",
-      // "home/index.js" : "./src/home/index.js",
-      // "exam/index.js" : "./src/exam/index.js",
-      // "editor/index.js" : "./src/editor/index.js",
+
+    // entry: entryObject,
+
+     entry: {
+      // "components/First.js" : "./src/components/First.js",
+      // "components/Second.js" : "./src/components/Second.js",
+      // "components/Third.js" : "./src/components/Third.js",
+      // "components/Fourth.js" : "./src/components/Fourth.js",
       "index.js" : "./src/index.js",
+      "sw.js" : "./src/sw.js",
     },
 
     output: {
@@ -41,26 +60,12 @@ module.exports = {
         {
             test: /\.css$/,
             use: [MiniCssExtractPlugin.loader, "css-loader"]
-        },
-        {
-            test: /\.doenet$/,
-            use: {loader: "raw-loader"}
-        },
-        {
-          test: /\.(png|jp(e*)g|svg)$/,  
-          use: [{
-              loader: 'url-loader',
-              options: { 
-                  limit: 10000, // Convert images < 10kb to base64 strings
-                  name: 'images/[hash]-[name].[ext]'
-              } 
-          }]
         }
       ]
     },
     plugins: [
       new HtmlWebPackPlugin({
-          chunks:['index.js'],
+          chunks:['index.js','sw.js'],
           template: "./src/index.html",
           filename: "./index.html",
           // favicon: "",
@@ -69,10 +74,7 @@ module.exports = {
           filename: "[name].css",
           // filename: "main.css",
           chunkFilename: "[id].css"
-      }),
-      new CopyWebpackPlugin([
-        { from: 'static' }
-      ])
+      })
   ],
     devServer: {
       port: 3000,

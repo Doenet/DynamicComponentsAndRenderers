@@ -16,8 +16,10 @@ class App extends Component {
     if (componentName !== "") {
       
       if (!this.componentsNames.includes(componentName)) {
-        return import(`./components/${componentName}.js`).then( component => {
-          // this.components.push(<Component />);
+          return import(/* webpackMode: "lazy", webpackChunkName: "./components/[request]" */ `./components/${componentName}.js`).then( component => {
+            // return import(/* webpackMode: "lazy" */ `./components/${componentName}.js`).then( component => {
+          // this.components.push(<Component.default/>);
+          
           this.components.push(React.createElement(component.default, {key:componentName}));
           this.componentsNames.push(componentName);
           console.log(`${componentName} loaded.`);
@@ -43,6 +45,7 @@ class App extends Component {
           <button onClick={() => this.loadComponent("Second")}>Second</button>
           <button onClick={() => this.loadComponent("Third")}>Third</button>
           <button onClick={() => this.loadComponent("Fourth")}>Fourth</button>
+          <button onClick={() => this.loadComponent("Fifth")}>Fifth</button>
         </div>
         <div className="components-container">
           {this.components}
