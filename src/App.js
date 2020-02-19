@@ -17,8 +17,6 @@ class App extends Component {
       
       if (!this.componentsNames.includes(componentName)) {
           return import(/* webpackMode: "lazy", webpackChunkName: "./components/[request]" */ `./components/${componentName}.js`).then( component => {
-            // return import(/* webpackMode: "lazy" */ `./components/${componentName}.js`).then( component => {
-          // this.components.push(<Component.default/>);
           
           this.components.push(React.createElement(component.default, {key:componentName}));
           this.componentsNames.push(componentName);
