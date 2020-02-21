@@ -1,14 +1,18 @@
 import React from 'react';
+import {number} from './subdir/number';
 
 class First extends React.Component {
   constructor(props){
     super(props);
 
+
+
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(e){
-    console.log('Clicked!!!');
+    console.log(`number is ${number}`);
+    // console.log(`number is 10`);
     
   }
 

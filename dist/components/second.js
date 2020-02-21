@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["./components/Second-js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["./components/second.js"],{
 
 /***/ "./src/components/Second.js":
 /*!**********************************!*\

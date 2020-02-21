@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 
+const componentReg = {
+  First: import(/* webpackMode: "lazy", webpackChunkName: "./components/first.js" */ `./components/First.js`),
+  Second: import(/* webpackMode: "lazy", webpackChunkName: "./components/second.js" */ `./components/Second.js`),
+  Third: import(/* webpackMode: "lazy", webpackChunkName: "./components/third.js" */ `./components/Third.js`),
+  Fourth: import(/* webpackMode: "lazy", webpackChunkName: "./components/fourth.js" */ `./components/Fourth.js`),
+  Fifth: import(/* webpackMode: "lazy", webpackChunkName: "./components/fifth.js" */ `./components/Fifth.js`),
+  }
+
+
 class App extends Component {
 
   constructor(props) {
@@ -16,8 +25,13 @@ class App extends Component {
     if (componentName !== "") {
       
       if (!this.componentsNames.includes(componentName)) {
-          return import(/* webpackMode: "lazy", webpackChunkName: "./components/[request]" */ `./components/${componentName}.js`).then( component => {
-          
+console.log(componentName);
+
+          // return import(/* webpackMode: "lazy", webpackChunkName: "./components/[id]" */ `./components/${componentName}.js`).then( component => {
+              // return import(/* webpackMode: "lazy", webpackChunkName: "./components/[request]" */ `./components/${componentName}.js`).then( component => {
+          return componentReg[componentName].then( component => {
+            // return import(/* webpackMode: "eager", webpackChunkName: "./components/[request]" */ `./components/${componentName}.js`).then( component => {
+
           this.components.push(React.createElement(component.default, {key:componentName}));
           this.componentsNames.push(componentName);
           console.log(`${componentName} loaded.`);

@@ -1,2 +1,2 @@
 
-export default number = 13;
+export const number = 13;
