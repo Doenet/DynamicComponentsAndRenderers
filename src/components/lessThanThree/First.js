@@ -1,5 +1,5 @@
 import React from 'react';
-import {number} from './subdir/number';
+import {number, number2} from '../subdir/number';
 
 class First extends React.Component {
   constructor(props){
@@ -12,6 +12,7 @@ class First extends React.Component {
 
   handleClick(e){
     console.log(`number is ${number}`);
+    console.log(`number2 is ${number2}`);
     // console.log(`number is 10`);
     
   }

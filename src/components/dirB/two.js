@@ -1,2 +1,2 @@
 
-export var two = 2;
+export const two = 2;

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 
 const componentReg = {
-  First: import(/* webpackMode: "lazy", webpackChunkName: "./components/first.js" */ `./components/First.js`),
-  Second: import(/* webpackMode: "lazy", webpackChunkName: "./components/second.js" */ `./components/Second.js`),
+  First: import(/* webpackMode: "lazy", webpackChunkName: "./components/first.js" */ `./components/lessThanThree/First.js`),
+  Second: import(/* webpackMode: "lazy", webpackChunkName: "./components/second.js" */ `./components/lessThanThree/Second.js`),
   Third: import(/* webpackMode: "lazy", webpackChunkName: "./components/third.js" */ `./components/Third.js`),
   Fourth: import(/* webpackMode: "lazy", webpackChunkName: "./components/fourth.js" */ `./components/Fourth.js`),
   Fifth: import(/* webpackMode: "lazy", webpackChunkName: "./components/fifth.js" */ `./components/Fifth.js`),
