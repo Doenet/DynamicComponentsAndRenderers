@@ -6,8 +6,14 @@ const componentReg = {
   Second: import(/* webpackMode: "lazy", webpackChunkName: "./components/second.js" */ `./components/lessThanThree/Second.js`),
   Third: import(/* webpackMode: "lazy", webpackChunkName: "./components/third.js" */ `./components/Third.js`),
   Fourth: import(/* webpackMode: "lazy", webpackChunkName: "./components/fourth.js" */ `./components/Fourth.js`),
-  Fifth: import(/* webpackMode: "lazy", webpackChunkName: "./components/fifth.js" */ `./components/Fifth.js`),
+  Fifth: import(/* webpackMode: "lazy", webpackChunkName: "./components/fifth.js" */ `./components/Fifth.js`)
   }
+const componentBundleReg = {
+  a: {
+    import:import(/* webpackMode: "lazy", webpackChunkName: "./components/A.js" */ `./components/AlphabetBundle.js`),
+    load:"A",
+}
+}
 
 
 class App extends Component {
@@ -21,12 +27,16 @@ class App extends Component {
   }
 
   loadComponent(componentName) {
+    console.log();
+    
 
     if (componentName !== "") {
       
       if (!this.componentsNames.includes(componentName)) {
-console.log(componentName);
+        console.log(componentName);
+        if (Object.keys(componentReg).includes(componentName)){
 
+          // if (componentReg.keys)
           // return import(/* webpackMode: "lazy", webpackChunkName: "./components/[id]" */ `./components/${componentName}.js`).then( component => {
               // return import(/* webpackMode: "lazy", webpackChunkName: "./components/[request]" */ `./components/${componentName}.js`).then( component => {
           return componentReg[componentName].then( component => {
@@ -37,6 +47,22 @@ console.log(componentName);
           console.log(`${componentName} loaded.`);
           this.forceUpdate();
         }).catch(error => `Error loading ${componentName}.`);
+      }else if (Object.keys(componentBundleReg).includes(componentName)){
+        return componentBundleReg[componentName].import.then( component => {
+          console.log(component);
+          console.log(componentBundleReg[componentName].load);
+          
+          this.components.push(React.createElement(component[componentBundleReg[componentName].load], {key:componentName}));
+          this.componentsNames.push(componentName);
+          console.log(`${componentName} loaded.`);
+          this.forceUpdate();
+          
+        }).catch(error => `Error loading ${componentName}.`);
+        }else{
+        console.log(`No match found for ${componentName}`);
+        
+      }
+
       } else {
         console.log(`already added ${componentName}`);
         
@@ -58,6 +84,7 @@ console.log(componentName);
           <button onClick={() => this.loadComponent("Third")}>Third</button>
           <button onClick={() => this.loadComponent("Fourth")}>Fourth</button>
           <button onClick={() => this.loadComponent("Fifth")}>Fifth</button>
+          <button onClick={() => this.loadComponent("a")}>A</button>
         </div>
         <div className="components-container">
           {this.components}
