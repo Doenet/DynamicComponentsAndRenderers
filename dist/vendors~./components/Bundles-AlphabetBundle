@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~./components/A.js~./components/fifth.js~./components/fourth.js~./components/third.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~./components/Bundles-AlphabetBundle"],{
 
 /***/ "./node_modules/@emotion/is-prop-valid/dist/is-prop-valid.browser.esm.js":
 /*!*******************************************************************************!*\

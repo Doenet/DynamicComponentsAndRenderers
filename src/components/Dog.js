@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Fourth() {
+export default function Dog() {
   return (
     <div className="component">
-      <p>Fourth</p>
+      <p>Dog - Woof!</p>
     </div>
   );
 }

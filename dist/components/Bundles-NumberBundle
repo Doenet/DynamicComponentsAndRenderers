@@ -1,0 +1,87 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["./components/Bundles-NumberBundle"],{
+
+/***/ "./src/components/Bundles/NumberBundle.js":
+/*!************************************************!*\
+  !*** ./src/components/Bundles/NumberBundle.js ***!
+  \************************************************/
+/*! exports provided: First, Second, Third, Fourth */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lessThanThree_First__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lessThanThree/First */ \"./src/components/lessThanThree/First.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"First\", function() { return _lessThanThree_First__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _lessThanThree_Second__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../lessThanThree/Second */ \"./src/components/lessThanThree/Second.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Second\", function() { return _lessThanThree_Second__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n/* harmony import */ var _Third__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Third */ \"./src/components/Third.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Third\", function() { return _Third__WEBPACK_IMPORTED_MODULE_2__[\"default\"]; });\n\n/* harmony import */ var _Fourth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Fourth */ \"./src/components/Fourth.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Fourth\", function() { return _Fourth__WEBPACK_IMPORTED_MODULE_3__[\"default\"]; });\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/components/Bundles/NumberBundle.js?");
+
+/***/ }),
+
+/***/ "./src/components/Fourth.js":
+/*!**********************************!*\
+  !*** ./src/components/Fourth.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Fourth; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Fourth() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"component\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", null, \"Fourth\"));\n}\n\n//# sourceURL=webpack:///./src/components/Fourth.js?");
+
+/***/ }),
+
+/***/ "./src/components/Third.js":
+/*!*********************************!*\
+  !*** ./src/components/Third.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return TheThirdOne; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction TheThirdOne() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"component\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", null, \"Third\"));\n}\n\n//# sourceURL=webpack:///./src/components/Third.js?");
+
+/***/ }),
+
+/***/ "./src/components/lessThanThree/First.js":
+/*!***********************************************!*\
+  !*** ./src/components/lessThanThree/First.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _subdir_number__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../subdir/number */ \"./src/components/subdir/number.js\");\nfunction _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n\nvar First =\n/*#__PURE__*/\nfunction (_React$Component) {\n  _inherits(First, _React$Component);\n\n  function First(props) {\n    var _this;\n\n    _classCallCheck(this, First);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(First).call(this, props));\n    _this.handleClick = _this.handleClick.bind(_assertThisInitialized(_this));\n    return _this;\n  }\n\n  _createClass(First, [{\n    key: \"handleClick\",\n    value: function handleClick(e) {\n      console.log(\"number is \".concat(_subdir_number__WEBPACK_IMPORTED_MODULE_1__[\"number\"]));\n      console.log(\"number2 is \".concat(_subdir_number__WEBPACK_IMPORTED_MODULE_1__[\"number2\"])); // console.log(`number is 10`);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"component\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", {\n        onClick: this.handleClick\n      }, \"First\"));\n    }\n  }]);\n\n  return First;\n}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); // function First() {\n//   return (\n//     <div className=\"component\">\n//       <p>First</p>\n//     </div>\n//   );\n// }\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (First);\n\n//# sourceURL=webpack:///./src/components/lessThanThree/First.js?");
+
+/***/ }),
+
+/***/ "./src/components/lessThanThree/Second.js":
+/*!************************************************!*\
+  !*** ./src/components/lessThanThree/Second.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Second; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _dirB_two__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../dirB/two */ \"./src/dirB/two.js\");\n\n\nfunction Second() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"component\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", null, \"Second\"), \"Two: \", _dirB_two__WEBPACK_IMPORTED_MODULE_1__[\"two\"]);\n}\n\n//# sourceURL=webpack:///./src/components/lessThanThree/Second.js?");
+
+/***/ }),
+
+/***/ "./src/components/subdir/number.js":
+/*!*****************************************!*\
+  !*** ./src/components/subdir/number.js ***!
+  \*****************************************/
+/*! exports provided: number, number2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"number\", function() { return number; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"number2\", function() { return number2; });\nvar number = 13;\nvar number2 = 15;\n\n//# sourceURL=webpack:///./src/components/subdir/number.js?");
+
+/***/ }),
+
+/***/ "./src/dirB/two.js":
+/*!*************************!*\
+  !*** ./src/dirB/two.js ***!
+  \*************************/
+/*! exports provided: two */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"two\", function() { return two; });\nvar two = 22;\n\n//# sourceURL=webpack:///./src/dirB/two.js?");
+
+/***/ })
+
+}]);

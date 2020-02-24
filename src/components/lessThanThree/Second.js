@@ -1,5 +1,5 @@
 import React from 'react';
-import {two} from '../dirB/two';
+import {two} from '../../dirB/two';
 
 export default function Second() {
   return (
