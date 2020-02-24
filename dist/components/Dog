@@ -1,5 +1,17 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["./components/Dog"],{
 
+/***/ "./src/bundles/Dog.js":
+/*!****************************!*\
+  !*** ./src/bundles/Dog.js ***!
+  \****************************/
+/*! exports provided: Dog */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_Dog__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Dog */ \"./src/components/Dog.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Dog\", function() { return _components_Dog__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n\n\n\n//# sourceURL=webpack:///./src/bundles/Dog.js?");
+
+/***/ }),
+
 /***/ "./src/components/Dog.js":
 /*!*******************************!*\
   !*** ./src/components/Dog.js ***!
@@ -8,7 +20,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Fourth; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Fourth() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"component\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", null, \"Fourth\"));\n}\n\n//# sourceURL=webpack:///./src/components/Dog.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Dog; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Dog() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"component\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", null, \"Dog - Woof!\"));\n}\n\n//# sourceURL=webpack:///./src/components/Dog.js?");
 
 /***/ })
 

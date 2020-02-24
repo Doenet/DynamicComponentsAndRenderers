@@ -1,14 +1,14 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["./components/Bundles-NumberBundle"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["./components/Numbers"],{
 
-/***/ "./src/components/Bundles/NumberBundle.js":
-/*!************************************************!*\
-  !*** ./src/components/Bundles/NumberBundle.js ***!
-  \************************************************/
-/*! exports provided: First, Second, Third, Fourth */
+/***/ "./src/bundles/Numbers.js":
+/*!********************************!*\
+  !*** ./src/bundles/Numbers.js ***!
+  \********************************/
+/*! exports provided: First, Second, TheThirdOne, Fourth */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lessThanThree_First__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lessThanThree/First */ \"./src/components/lessThanThree/First.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"First\", function() { return _lessThanThree_First__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _lessThanThree_Second__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../lessThanThree/Second */ \"./src/components/lessThanThree/Second.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Second\", function() { return _lessThanThree_Second__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n/* harmony import */ var _Third__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Third */ \"./src/components/Third.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Third\", function() { return _Third__WEBPACK_IMPORTED_MODULE_2__[\"default\"]; });\n\n/* harmony import */ var _Fourth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Fourth */ \"./src/components/Fourth.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Fourth\", function() { return _Fourth__WEBPACK_IMPORTED_MODULE_3__[\"default\"]; });\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/components/Bundles/NumberBundle.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_lessThanThree_First__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/lessThanThree/First */ \"./src/components/lessThanThree/First.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"First\", function() { return _components_lessThanThree_First__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; });\n\n/* harmony import */ var _components_lessThanThree_Second__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/lessThanThree/Second */ \"./src/components/lessThanThree/Second.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Second\", function() { return _components_lessThanThree_Second__WEBPACK_IMPORTED_MODULE_1__[\"default\"]; });\n\n/* harmony import */ var _components_Third__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Third */ \"./src/components/Third.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"TheThirdOne\", function() { return _components_Third__WEBPACK_IMPORTED_MODULE_2__[\"TheThirdOne\"]; });\n\n/* harmony import */ var _components_Fourth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Fourth */ \"./src/components/Fourth.js\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"Fourth\", function() { return _components_Fourth__WEBPACK_IMPORTED_MODULE_3__[\"default\"]; });\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/bundles/Numbers.js?");
 
 /***/ }),
 
@@ -28,11 +28,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /*!*********************************!*\
   !*** ./src/components/Third.js ***!
   \*********************************/
-/*! exports provided: default */
+/*! exports provided: TheThirdOne */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return TheThirdOne; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction TheThirdOne() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"component\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", null, \"Third\"));\n}\n\n//# sourceURL=webpack:///./src/components/Third.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"TheThirdOne\", function() { return TheThirdOne; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction TheThirdOne() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"component\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"p\", null, \"Third\"));\n}\n\n//# sourceURL=webpack:///./src/components/Third.js?");
 
 /***/ }),
 

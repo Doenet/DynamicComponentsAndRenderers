@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 
-// componentName:[import Where it's going Where to find the component,What it's named in the file]
+// all lower case componentName:[bundle which includes the component,name of import]
 const componentReg = {
-
-
-  second: ['Bundles/NumberBundle.js','Second'],
-  // third: ['/Bundles/NumberBundle.js','TheThirdOne'],
-  fourth: ['Bundles/NumberBundle.js','Fourth'],
-  a: ['Bundles/AlphabetBundle.js','A'],
-  // b: [import(/* webpackMode: "lazy", webpackChunkName: "./components/AlphabetBundle.js" */ './components/Bundles/AlphabetBundle.js'),'B'],
+  first: ['Numbers.js','First'],
+  second: ['Numbers.js','Second'],
+  third: ['Numbers.js','TheThirdOne'],
+  fourth: ['Numbers.js','Fourth'],
+  a: ['Letters.js','A'],
+  b: ['Letters.js','B'],
+  dog: ['Dog.js','Dog'],
   }
 
 
@@ -25,18 +25,12 @@ class App extends Component {
 
   loadComponent(componentName) {
 
-   
-
     if (!this.componentsNames.includes(componentName)) {
       console.log(`Attempting: ${componentName}`);
       if (Object.keys(componentReg).includes(componentName)){
         let importPath = componentReg[componentName][0];
         let exportName = componentReg[componentName][1]
-        console.log(importPath);
-        console.log(exportName);
-          return import(/* webpackMode: "lazy", webpackChunkName: "./components/[request]" */ `./components/${importPath}`).then(bundle => {
-    //     return importExp.then( bundle => {
-          
+          return import(/* webpackMode: "lazy", webpackChunkName: "./components/[request]" */ `./bundles/${importPath}`).then(bundle => {
           this.components.push(React.createElement(bundle[exportName], {key:componentName}));
           this.componentsNames.push(componentName);
           console.log(`${componentName} loaded.`);
@@ -62,6 +56,7 @@ class App extends Component {
           <button onClick={() => this.loadComponent("fourth")}>Fourth</button>
           <button onClick={() => this.loadComponent("a")}>A</button>
           <button onClick={() => this.loadComponent("b")}>B</button>
+          <button onClick={() => this.loadComponent("dog")}>Dog</button>
         </div>
         <div className="components-container">
           {this.components}
